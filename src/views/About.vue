@@ -19,7 +19,7 @@
           <div class="relative">
             <!-- Main image with border effect -->
             <div class="relative z-10">
-              <img :src="getAssetPath('../assets/references/profile_picture.jpeg')" alt="Mustafa Camci" 
+              <img :src="'../assets/references/profile_picture.jpeg'" alt="Mustafa Camci" 
                 class="w-full h-auto rounded-lg shadow-xl" />
             </div>
             
@@ -119,16 +119,44 @@
       <div class="relative px-8">
         <!-- Testimonial slider (simplified version) -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div v-for="testimonial in testimonials" :key="testimonial.name" class="card p-8">
+          <div class="card p-8">
             <div class="text-primary text-4xl mb-4">❝</div>
-            <p class="text-gray-600 mb-6">{{ testimonial.text }}</p>
+            <p class="text-gray-600 mb-6">Working with Mustafa was a pleasure. His technical skills and attention to detail transformed our project from good to exceptional.</p>
             <div class="flex items-center">
               <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                <img :src="getAssetPath(testimonial.image)" :alt="testimonial.name" class="w-full h-full object-cover" />
+                <img :src="'../assets/references/jessica_monet.jpeg'" alt="Jessica Monet" class="w-full h-full object-cover" />
               </div>
               <div>
-                <h4 class="font-bold text-secondary">{{ testimonial.name }}</h4>
-                <p class="text-sm text-gray-500">{{ testimonial.position }}</p>
+                <h4 class="font-bold text-secondary">Jessica Monet</h4>
+                <p class="text-sm text-gray-500">Brand Communication Manager at Oro Jewelry</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card p-8">
+            <div class="text-primary text-4xl mb-4">❝</div>
+            <p class="text-gray-600 mb-6">Mustafa's ability to understand our requirements and translate them into elegant code made all the difference. Highly recommended!</p>
+            <div class="flex items-center">
+              <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                <img :src="'../assets/references/berkay_godeoglu.jpeg'" alt="Berkay Godeoglu" class="w-full h-full object-cover" />
+              </div>
+              <div>
+                <h4 class="font-bold text-secondary">Berkay Godeoglu</h4>
+                <p class="text-sm text-gray-500">AI and Robotics Engiineer at Ford Otosan</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card p-8">
+            <div class="text-primary text-4xl mb-4">❝</div>
+            <p class="text-gray-600 mb-6">Not only is Mustafa technically proficient, but he's also a great communicator who keeps everyone informed throughout the project.</p>
+            <div class="flex items-center">
+              <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                <img :src="'../assets/references/mert_sever.jpeg'" alt="Mert Sever" class="w-full h-full object-cover" />
+              </div>
+              <div>
+                <h4 class="font-bold text-secondary">Mert Sever</h4>
+                <p class="text-sm text-gray-500">Planning and Control SW Development Leader at Ford Otosan</p>
               </div>
             </div>
           </div>
@@ -183,28 +211,6 @@ const values = [
     title: 'Continuous Learning',
     icon: 'fas fa-book fa-lg',
     description: 'I am committed to lifelong learning and constantly expanding my knowledge and skills.'
-  }
-];
-
-// Testimonials
-const testimonials = [
-  {
-    text: "Working with Mustafa was a pleasure. His technical skills and attention to detail transformed our project from good to exceptional.",
-    name: "Jessica Monet",
-    position: "Brand Communication Manager at Oro Jewelry",
-    image: getAssetPath('../assets/references/jessica_monet.jpeg')
-  },
-  {
-    text: "Mustafa's ability to understand our requirements and translate them into elegant code made all the difference. Highly recommended!",
-    name: "Berkay Godeoglu",
-    position: "AI and Robotics Engiineer at Ford Otosan",
-    image: getAssetPath('../assets/references/berkay_godeoglu.jpeg')
-  },
-  {
-    text: "Not only is Mustafa technically proficient, but he's also a great communicator who keeps everyone informed throughout the project.",
-    name: "Mert Sever",
-    position: "Planning and Control SW Development Leader at Ford Otosan",
-    image: getAssetPath('../assets/references/mert_sever.jpeg')
   }
 ];
 </script> 
