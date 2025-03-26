@@ -1,5 +1,5 @@
 import { createApp } from 'vue';
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import App from './App.vue';
 import './assets/main.css';
 
@@ -24,7 +24,7 @@ const routes = [
 
 // Create router instance
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
