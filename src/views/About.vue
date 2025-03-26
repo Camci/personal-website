@@ -19,7 +19,7 @@
           <div class="relative">
             <!-- Main image with border effect -->
             <div class="relative z-10">
-              <img src="../assets/references/profile_picture.jpeg" alt="Mustafa Camci" 
+              <img :src="getAssetPath('../assets/references/profile_picture.jpeg')" alt="Mustafa Camci" 
                 class="w-full h-auto rounded-lg shadow-xl" />
             </div>
             
@@ -124,7 +124,7 @@
             <p class="text-gray-600 mb-6">{{ testimonial.text }}</p>
             <div class="flex items-center">
               <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                <img :src="testimonial.image" :alt="testimonial.name" class="w-full h-full object-cover" />
+                <img :src="getAssetPath(testimonial.image)" :alt="testimonial.name" class="w-full h-full object-cover" />
               </div>
               <div>
                 <h4 class="font-bold text-secondary">{{ testimonial.name }}</h4>
@@ -150,6 +150,18 @@
 </template>
 
 <script setup>
+import { computed } from 'vue';
+
+// Helper function to get the correct asset path
+const getAssetPath = (path) => {
+  // If the path is already an absolute URL, return it as is
+  if (path.startsWith('http')) {
+    return path;
+  }
+  // Otherwise, prepend the BASE_URL for GitHub Pages compatibility
+  return import.meta.env.BASE_URL + path.replace(/^\.\.\//, '');
+};
+
 // Values
 const values = [
   {
