@@ -1,0 +1,34 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "Mustafa Camci's Personal Website and Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "portfolio",
+    "personal-website",
+    "vue",
+    "tailwind",
+    "three.js"
+  ],
+  "author": "Mustafa Camci",
+  "license": "MIT",
+  "dependencies": {
+    "@vueuse/core": "^10.9.0",
+    "gsap": "^3.12.5",
+    "three": "^0.162.0",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "autoprefixer": "^10.4.18",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.1.6"
+  }
+}
