@@ -9,7 +9,7 @@
           A detailed overview of my professional experience, education, and technical skills.
         </p>
         <div class="mt-8">
-          <a href="../MustafaCamci_CV.pdf" download class="btn bg-white text-secondary hover:bg-white/90">
+          <a href="https://github.com/Camci/personal-website/raw/master/MustafaCamci_CV.pdf" download class="btn bg-white text-secondary hover:bg-white/90">
             <i class="fas fa-download mr-2"></i> Download PDF
           </a>
         </div>
