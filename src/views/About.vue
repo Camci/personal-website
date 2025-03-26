@@ -19,7 +19,7 @@
           <div class="relative">
             <!-- Main image with border effect -->
             <div class="relative z-10">
-              <img src="../assets/references/profile_picture.jpeg" alt="Mustafa Camci" 
+              <img :src="getAssetPath('../assets/references/profile_picture.jpeg')" alt="Mustafa Camci" 
                 class="w-full h-auto rounded-lg shadow-xl" />
             </div>
             
@@ -192,19 +192,19 @@ const testimonials = [
     text: "Working with Mustafa was a pleasure. His technical skills and attention to detail transformed our project from good to exceptional.",
     name: "Jessica Monet",
     position: "Brand Communication Manager at Oro Jewelry",
-    image: "../assets/references/jessica_monet.jpeg"
+    image: getAssetPath('../assets/references/jessica_monet.jpeg')
   },
   {
     text: "Mustafa's ability to understand our requirements and translate them into elegant code made all the difference. Highly recommended!",
     name: "Berkay Godeoglu",
     position: "AI and Robotics Engiineer at Ford Otosan",
-    image: "../assets/references/berkay_godeoglu.jpeg"
+    image: getAssetPath('../assets/references/berkay_godeoglu.jpeg')
   },
   {
     text: "Not only is Mustafa technically proficient, but he's also a great communicator who keeps everyone informed throughout the project.",
     name: "Mert Sever",
     position: "Planning and Control SW Development Leader at Ford Otosan",
-    image: "../assets/references/mert_sever.jpeg"
+    image: getAssetPath('../assets/references/mert_sever.jpeg')
   }
 ];
 </script> 
