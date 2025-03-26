@@ -124,7 +124,7 @@
             <p class="text-gray-600 mb-6">{{ testimonial.text }}</p>
             <div class="flex items-center">
               <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                <img :src="getAssetPath(testimonial.image)" :alt="testimonial.name" class="w-full h-full object-cover" />
+                <img :src="testimonial.image" :alt="testimonial.name" class="w-full h-full object-cover" />
               </div>
               <div>
                 <h4 class="font-bold text-secondary">{{ testimonial.name }}</h4>
