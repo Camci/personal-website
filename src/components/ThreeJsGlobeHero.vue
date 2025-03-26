@@ -58,12 +58,12 @@ const init = () => {
   
   // Earth texture loader
   const textureLoader = new THREE.TextureLoader();
-  const earthTexture = textureLoader.load(import.meta.env.BASE_URL + 'earth_texture.jpg', () => {
+  const earthTexture = textureLoader.load('/earth_texture.jpg', () => {
     animate(); // Start animation once texture is loaded
   });
   
-  const bumpMap = textureLoader.load(import.meta.env.BASE_URL + 'earth_bump.jpg');
-  const specularMap = textureLoader.load(import.meta.env.BASE_URL + 'earth_specular.jpg');
+  const bumpMap = textureLoader.load('/earth_bump.jpg');
+  const specularMap = textureLoader.load('/earth_specular.jpg');
   
   const earthMaterial = new THREE.MeshPhongMaterial({
     map: earthTexture,
@@ -93,7 +93,7 @@ const init = () => {
   globe.add(northPole);
   
   // Add cloud layer
-  const cloudsTexture = textureLoader.load(import.meta.env.BASE_URL + 'clouds.png');
+  const cloudsTexture = textureLoader.load('/clouds.png');
   const cloudsGeometry = new THREE.SphereGeometry(5.1, 64, 64);
   const cloudsMaterial = new THREE.MeshPhongMaterial({
     map: cloudsTexture,

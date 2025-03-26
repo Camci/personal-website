@@ -46,7 +46,7 @@
         </div>
         <div class="relative">
           <div class="aspect-square rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
-            <img :src="getAssetPath('../assets/references/profile_picture.jpeg')" alt="Mustafa Camci" class="w-full h-full object-cover" />
+            <img src="../assets/references/profile_picture.jpeg" alt="Mustafa Camci" class="w-full h-full object-cover" />
           </div>
           <div class="absolute -bottom-6 -right-6 bg-primary text-white p-4 rounded-lg shadow-lg">
             <div class="flex items-center space-x-2">
@@ -109,16 +109,6 @@ import ProjectCard from '../components/ProjectCard.vue';
 import TypewriterEffect from '../components/TypewriterEffect.vue';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-
-// Helper function to get the correct asset path
-const getAssetPath = (path) => {
-  // If the path is already an absolute URL, return it as is
-  if (path.startsWith('http')) {
-    return path;
-  }
-  // Otherwise, prepend the BASE_URL for GitHub Pages compatibility
-  return import.meta.env.BASE_URL + path.replace(/^\.\.\//, '');
-};
 
 // Get router
 const router = useRouter();

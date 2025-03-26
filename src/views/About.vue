@@ -19,7 +19,7 @@
           <div class="relative">
             <!-- Main image with border effect -->
             <div class="relative z-10">
-              <img :src="getAssetPath('../assets/references/profile_picture.jpeg')" alt="Mustafa Camci" 
+              <img src="../assets/references/profile_picture.jpeg" alt="Mustafa Camci" 
                 class="w-full h-auto rounded-lg shadow-xl" />
             </div>
             
