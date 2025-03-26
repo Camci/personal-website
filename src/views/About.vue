@@ -24,11 +24,11 @@
             </div>
             
             <!-- Background accent elements -->
-            <div class="absolute top-10 -left-10 w-full h-full border-4 border-primary rounded-lg -z-0"></div>
-            <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-secondary/10 rounded-lg -z-0"></div>
+            <div class="absolute top-10 -left-4 md:-left-10 w-full h-full border-4 border-primary rounded-lg -z-0"></div>
+            <div class="absolute -bottom-4 md:-bottom-10 -right-4 md:-right-10 w-64 h-64 bg-secondary/10 rounded-lg -z-0"></div>
             
             <!-- Quick facts -->
-            <div class="absolute bottom-10 -right-5 bg-white shadow-xl p-6 rounded-lg z-20 max-w-xs">
+            <div class="absolute bottom-4 md:bottom-10 -right-2 md:-right-5 bg-white shadow-xl p-4 md:p-6 rounded-lg z-20 max-w-xs">
               <h3 class="text-lg font-bold text-secondary mb-4">Quick Facts</h3>
               <ul class="space-y-2">
                 <li class="flex items-center">
