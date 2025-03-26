@@ -19,7 +19,7 @@
           <div class="relative">
             <!-- Main image with border effect -->
             <div class="relative z-10">
-              <img src="../assets/references/profile_picture.jpeg" alt="Mustafa Camci" 
+              <img src="https://raw.githubusercontent.com/Camci/personal-website/refs/heads/master/src/assets/references/profile_picture.jpeg" alt="Mustafa Camci" 
                 class="w-full h-auto rounded-lg shadow-xl" />
             </div>
             
@@ -124,7 +124,7 @@
             <p class="text-gray-600 mb-6">Working with Mustafa was a pleasure. His technical skills and attention to detail transformed our project from good to exceptional.</p>
             <div class="flex items-center">
               <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                <img src="../assets/references/jessica_monet.jpeg" alt="Jessica Monet" class="w-full h-full object-cover" />
+                <img src="https://raw.githubusercontent.com/Camci/personal-website/refs/heads/master/src/assets/references/jessica_monet.jpeg" alt="Jessica Monet" class="w-full h-full object-cover" />
               </div>
               <div>
                 <h4 class="font-bold text-secondary">Jessica Monet</h4>
@@ -138,7 +138,7 @@
             <p class="text-gray-600 mb-6">Mustafa's ability to understand our requirements and translate them into elegant code made all the difference. Highly recommended!</p>
             <div class="flex items-center">
               <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                <img src="../assets/references/berkay_godeoglu.jpeg" alt="Berkay Godeoglu" class="w-full h-full object-cover" />
+                <img src="https://raw.githubusercontent.com/Camci/personal-website/refs/heads/master/src/assets/references/berkay_godeoglu.jpeg" alt="Berkay Godeoglu" class="w-full h-full object-cover" />
               </div>
               <div>
                 <h4 class="font-bold text-secondary">Berkay Godeoglu</h4>
@@ -152,7 +152,7 @@
             <p class="text-gray-600 mb-6">Not only is Mustafa technically proficient, but he's also a great communicator who keeps everyone informed throughout the project.</p>
             <div class="flex items-center">
               <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                <img src="../assets/references/mert_sever.jpeg" alt="Mert Sever" class="w-full h-full object-cover" />
+                <img src="https://raw.githubusercontent.com/Camci/personal-website/refs/heads/master/src/assets/references/mert_sever.jpeg" alt="Mert Sever" class="w-full h-full object-cover" />
               </div>
               <div>
                 <h4 class="font-bold text-secondary">Mert Sever</h4>
