@@ -46,7 +46,7 @@
         </div>
         <div class="relative">
           <div class="aspect-square rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
-            <img src="/src/assets/references/profile_picture.jpeg" alt="Mustafa Camci" class="w-full h-full object-cover" />
+            <img src="../assets/references/profile_picture.jpeg" alt="Mustafa Camci" class="w-full h-full object-cover" />
           </div>
           <div class="absolute -bottom-6 -right-6 bg-primary text-white p-4 rounded-lg shadow-lg">
             <div class="flex items-center space-x-2">
