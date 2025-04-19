@@ -2,12 +2,12 @@
   <div>
     <!-- Selected ThreeJs Hero component will be rendered -->
     <component :is="selectedHero" />
-    
+
     <!-- Controls to switch between hero types (fixed at the bottom right) -->
     <div class="fixed bottom-4 right-4 z-50 bg-white/30 backdrop-blur-md p-2 rounded-lg shadow-lg">
       <div class="flex space-x-2">
-        <button 
-          v-for="(hero, index) in displayedHeroes" 
+        <button
+          v-for="(hero, index) in displayedHeroes"
           :key="hero.name"
           @click="selectHero(hero.originalIndex)"
           class="w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200"
@@ -34,25 +34,24 @@ const emit = defineEmits(['hero-changed']);
 // Get the current route
 const route = useRoute();
 
-// Check if coming from another route (not initial page load)
-const isFromAnotherRoute = ref(!!sessionStorage.getItem('previousRoute'));
+// We always start with ThreeJsHero now, regardless of entry path
 
 // Define available heroes with original order (desktop)
 const heroes = [
-  { 
-    component: ThreeJsGlobeHero, 
+  {
+    component: ThreeJsGlobeHero,
     name: 'Globe',
     icon: 'fas fa-globe',
     originalIndex: 0
   },
-  { 
-    component: ThreeJsHero, 
+  {
+    component: ThreeJsHero,
     name: 'Particles',
     icon: 'fas fa-star',
     originalIndex: 1
   },
-  { 
-    component: ThreeJsWavesHero, 
+  {
+    component: ThreeJsWavesHero,
     name: 'Waves',
     icon: 'fas fa-water',
     originalIndex: 2
@@ -69,18 +68,9 @@ const wasMobile = ref(false);
 const updateDeviceType = () => {
   wasMobile.value = isMobile.value;
   isMobile.value = window.innerWidth < 768;
-  
-  // If switching between mobile and desktop, update the hero
-  if (wasMobile.value !== isMobile.value) {
-    // If switching to mobile
-    if (isMobile.value) {
-      // Switch to Particles view on mobile
-      selectHero(1); // Particles
-    } else {
-      // Switch to Globe view on desktop
-      selectHero(0); // Globe
-    }
-  }
+
+  // We no longer automatically switch heroes based on device type
+  // Users can still manually select their preferred hero
 };
 
 // Computed property for heroes in the correct order based on device
@@ -111,27 +101,17 @@ const selectHero = (index) => {
 
 // Set up resize listener and initial check
 onMounted(() => {
-  // Save current route for future navigation detection
-  sessionStorage.setItem('previousRoute', route.path);
+  // No longer need to track previous route
 
   window.addEventListener('resize', updateDeviceType);
   updateDeviceType(); // Initial check
-  
-  // Determine initial hero
-  if (isFromAnotherRoute.value) {
-    // Coming from another route - show Particles
-    selectedIndex.value = 1; // Particles
-  } else if (isMobile.value) {
-    // On mobile - show Particles
-    selectedIndex.value = 1; // Particles
-  } else {
-    // On desktop with direct navigation - show Globe
-    selectedIndex.value = 0; // Globe
-  }
-  
+
+  // Always start with ThreeJsHero (Particles)
+  selectedIndex.value = 1; // Particles
+
   // Set the selected hero component
   selectedHero.value = heroes[selectedIndex.value].component;
-  
+
   // Emit the initial hero type
   emit('hero-changed', heroes[selectedIndex.value].name);
 });
@@ -140,4 +120,4 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('resize', updateDeviceType);
 });
-</script> 
+</script>
