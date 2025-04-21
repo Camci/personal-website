@@ -21,7 +21,7 @@
         </div>
       </div>
       <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <a href="#about-preview" class="text-secondary opacity-70 hover:opacity-100">
+        <a @click="scrollToSection('about-preview')" class="text-secondary opacity-70 hover:opacity-100 cursor-pointer">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
@@ -78,10 +78,10 @@
         </router-link>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <ProjectCard 
-          v-for="project in featuredProjects" 
-          :key="project.id" 
-          :project="project" 
+        <ProjectCard
+          v-for="project in featuredProjects"
+          :key="project.id"
+          :project="project"
           @click="navigateToProject(project)"
         />
       </div>
@@ -124,6 +124,14 @@ const selectedHero = ref('Particles');
 // Function to update the hero type
 const updateHeroType = (heroName) => {
   selectedHero.value = heroName;
+};
+
+// Function to scroll to a section
+const scrollToSection = (sectionId) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
 };
 
 // Skills data
@@ -179,4 +187,4 @@ const featuredProjects = [
 .text-shadow-sm {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
-</style> 
+</style>
