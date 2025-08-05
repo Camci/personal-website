@@ -115,7 +115,7 @@ const projects = [
       './assets/bulkBridge/JobStatusHistory_bulkBridge.png',
       './assets/bulkBridge/update_bulkBridge.png'
     ],
-    tags: ['Shopify', 'AWS', 'React', 'Serverless', 'CSV Processing', 'Bulk Operations', 'API Integration', 'DynamoDB', 'Lambda'],
+    tags: ['Shopify', 'AWS', 'React', 'GraphQL', 'Admin API', 'Serverless', 'CSV Processing', 'Bulk Operations', 'API Integration', 'DynamoDB', 'Lambda'],
     category: 'Web Development',
     link: '#'
   },
