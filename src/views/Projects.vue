@@ -108,13 +108,8 @@ const projects = [
     id: 3,
     title: 'BulkBridge - Shopify Data Management App',
     description: 'Developed a comprehensive Shopify embedded application for bulk data import/export operations using CSV format. Built with AWS Serverless architecture for high scalability and cost efficiency. Implemented secure authentication using Shopify session tokens and JWT. Created a React-based frontend with Shopify Polaris UI components and App Bridge for seamless integration. Built serverless backend using AWS Lambda, API Gateway, DynamoDB, and S3 for optimal performance. Implemented comprehensive job tracking system with detailed status updates and error handling. Developed bulk operations for products, customers, orders, discounts, and metafields management. Created automated CSV processing with validation and error reporting. Built scalable architecture supporting stores with thousands of products. Implemented secure file handling with S3 integration for temporary storage. Created detailed logging system for audit trails and debugging. Built responsive admin interface with real-time progress tracking. Implemented batch processing capabilities for large datasets. Created automated cleanup processes for temporary files and expired sessions. 10K variants imported in 3 minutes.',
-    images: [
-      './assets/bulkBridge/export_bulkBridge.png',
-      './assets/bulkBridge/Export_Options_bulkBridge.png',
-      './assets/bulkBridge/import_bulkdBridge.png',
-      './assets/bulkBridge/JobStatusHistory_bulkBridge.png',
-      './assets/bulkBridge/update_bulkBridge.png'
-    ],
+    image: 'https://placehold.co/600x400/1abc9c/FFFFFF.png?text=BulkBridge+App',
+    video: 'https://www.youtube.com/embed/McGy23z7rI8',
     tags: ['Shopify', 'AWS', 'React', 'Serverless', 'CSV Processing', 'Bulk Operations', 'API Integration', 'DynamoDB', 'Lambda'],
     category: 'Web Development',
     link: '#'
