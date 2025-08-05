@@ -93,7 +93,45 @@
               </div>
             </div>
             
-            <!-- Image display for projects without video but with image -->
+            <!-- Multiple images carousel for projects with multiple images -->
+            <div v-else-if="hasMultipleImages" class="w-full aspect-video relative bg-gray-100">
+              <img 
+                :src="currentImage" 
+                :alt="project.title" 
+                class="w-full h-full object-contain p-4" 
+              />
+              <!-- Navigation dots for multiple images -->
+              <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                <div 
+                  v-for="(image, index) in project.images" 
+                  :key="index"
+                  class="w-3 h-3 rounded-full transition-colors duration-200 cursor-pointer"
+                  :class="currentImageIndex === index ? 'bg-primary' : 'bg-gray-400 hover:bg-gray-600'"
+                  @click.stop="currentImageIndex = index"
+                ></div>
+              </div>
+              <!-- Navigation arrows -->
+              <div v-if="project.images.length > 1" class="absolute inset-0 flex items-center justify-between p-4">
+                <button 
+                  @click.stop="previousImage"
+                  class="w-10 h-10 bg-black/50 text-white rounded-full flex items-center justify-center hover:bg-black/70 transition-colors"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                <button 
+                  @click.stop="nextImage"
+                  class="w-10 h-10 bg-black/50 text-white rounded-full flex items-center justify-center hover:bg-black/70 transition-colors"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            
+            <!-- Single image display for projects without video but with image -->
             <div 
               v-else-if="!hasVideo && !project.noMedia" 
               class="w-full aspect-video flex items-center justify-center overflow-hidden"
@@ -177,6 +215,40 @@ const videoRef = ref(null);
 const mobileVideoRef = ref(null);
 const isPlaying = ref(true);
 const activeVideoTab = ref('desktop');
+const currentImageIndex = ref(0);
+
+// Multiple images functionality
+const hasMultipleImages = computed(() => {
+  return props.project?.images && props.project.images.length > 0;
+});
+
+const currentImage = computed(() => {
+  if (hasMultipleImages.value) {
+    return props.project.images[currentImageIndex.value];
+  }
+  return props.project.image;
+});
+
+const nextImage = () => {
+  if (hasMultipleImages.value) {
+    currentImageIndex.value = (currentImageIndex.value + 1) % props.project.images.length;
+  }
+};
+
+const previousImage = () => {
+  if (hasMultipleImages.value) {
+    currentImageIndex.value = currentImageIndex.value === 0 
+      ? props.project.images.length - 1 
+      : currentImageIndex.value - 1;
+  }
+};
+
+// Reset image index when modal opens
+watch(() => props.modelValue, (newVal) => {
+  if (newVal) {
+    currentImageIndex.value = 0;
+  }
+});
 
 // Check if the project has any video
 const hasVideo = computed(() => {

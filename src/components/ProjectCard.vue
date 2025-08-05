@@ -28,6 +28,43 @@
         </div>
       </div>
       
+      <!-- Multiple images carousel -->
+      <div v-else-if="hasMultipleImages" class="w-full h-full relative">
+        <img 
+          :src="currentImage" 
+          :alt="project.title" 
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+        />
+        <!-- Navigation dots for multiple images -->
+        <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-1">
+          <div 
+            v-for="(image, index) in project.images" 
+            :key="index"
+            class="w-2 h-2 rounded-full transition-colors duration-200"
+            :class="currentImageIndex === index ? 'bg-white' : 'bg-white/50'"
+          ></div>
+        </div>
+        <!-- Navigation arrows -->
+        <div v-if="project.images.length > 1" class="absolute inset-0 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <button 
+            @click.stop="previousImage"
+            class="w-8 h-8 bg-black/50 text-white rounded-full flex items-center justify-center hover:bg-black/70 transition-colors"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button 
+            @click.stop="nextImage"
+            class="w-8 h-8 bg-black/50 text-white rounded-full flex items-center justify-center hover:bg-black/70 transition-colors"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      
       <!-- Regular image for all other projects -->
       <div 
         v-else
@@ -68,7 +105,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 
 const props = defineProps({
   project: {
@@ -78,6 +115,34 @@ const props = defineProps({
 });
 
 defineEmits(['click']);
+
+// Multiple images functionality
+const currentImageIndex = ref(0);
+
+const hasMultipleImages = computed(() => {
+  return props.project?.images && props.project.images.length > 0;
+});
+
+const currentImage = computed(() => {
+  if (hasMultipleImages.value) {
+    return props.project.images[currentImageIndex.value];
+  }
+  return props.project.image;
+});
+
+const nextImage = () => {
+  if (hasMultipleImages.value) {
+    currentImageIndex.value = (currentImageIndex.value + 1) % props.project.images.length;
+  }
+};
+
+const previousImage = () => {
+  if (hasMultipleImages.value) {
+    currentImageIndex.value = currentImageIndex.value === 0 
+      ? props.project.images.length - 1 
+      : currentImageIndex.value - 1;
+  }
+};
 
 // Check if the video is a YouTube URL
 const isYoutubeVideo = computed(() => {
