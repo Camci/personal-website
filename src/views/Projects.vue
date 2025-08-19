@@ -77,7 +77,7 @@ const openProjectModal = (project) => {
 };
 
 // Categories
-const categories = ['All', 'Web Development', 'E-commerce', 'Python Automation', 'Marketing Analytics'];
+const categories = ['All',"AI", 'Web Development', 'E-commerce', 'Python Automation', 'Marketing Analytics'];
 const selectedCategory = ref('All');
 
 // Projects data
@@ -136,23 +136,23 @@ const projects = [
   },
   {
     id: 6,
-    title: 'Modern Portfolio Website',
-    description: 'Developed a sophisticated personal portfolio website with advanced interaction and multimedia capabilities. Built with Vue.js and Tailwind CSS for a fast, responsive, and modern user experience. Implemented a flexible project showcase with interactive modals and media display. Created custom video integration supporting both direct video files and YouTube embeds with player controls. Integrated 3D.js for interactive visual elements and dynamic content presentation. Designed an intelligent content display system that adapts to different media types (videos, images). Incorporated a two-column feature list layout for improved readability of project details. Built responsive design ensuring optimal experience across all devices from mobile to desktop. Added category filtering for easy navigation through different project types. Implemented smooth animations and transitions for enhanced user experience. Used modern JavaScript features and Vue.js composition API for maintainable and scalable code architecture.',
-    image: 'https://placehold.co/600x400/e74c3c/FFFFFF.png?text=Vue.js+Tailwind.css+Portfolio',
-    noMedia: true,
-    tags: ['Vue.js', 'Tailwind CSS', 'JavaScript', '3D.js', 'Responsive Design', 'Interactive UI'],
-    category: 'Web Development',
-    link: '#'
-  },
-  {
-    id: 7,
     title: 'Mosaique AI Marketing Tracker',
     description: 'Built a sophisticated AI-powered marketing analytics platform from the ground up. AWS based ecosystem leveraging cloud-native architecture. Custom Lambda functions for serverless processing of marketing data. Custom API Gateways established for secure data flow and third-party integrations. Vue.js front-end with custom CSS styling delivering an intuitive user experience. Modern and fresh interface designed for clarity and ease of use. Detailed metric demonstration through interactive graphs, charts and comprehensive summaries. External application connections integrated seamlessly with Meta Suite, Shopify and Google Analytics. Full private integrated AI solution for predictive analytics and marketing insights. Custom development environment with enhanced authentication steps based on AWS security best practices.',
     image: 'https://mosaique.us/img/logo_black.c5aa620b.png',
     imageBg: 'bg-white',
     imageStyle: 'object-contain max-w-[50%] max-h-[50%]',
     tags: ['AWS', 'Vue.js', 'Lambda', 'API Gateway', 'AI', 'Analytics', 'Serverless'],
-    category: 'Web Development',
+    category: 'AI',
+    link: '#'
+  },
+  {
+    id: 7,
+    title: 'ATS Resume Checker',
+    description: 'Developed a powerful web application that helps job seekers optimize their resumes for Applicant Tracking Systems (ATS) using Google Gemini AI. Built comprehensive resume analysis system that analyzes resumes against job descriptions providing detailed feedback, compatibility scores, and actionable suggestions. Implemented advanced keyword analysis to identify matched and missing keywords from job requirements. Created skill gap analysis to understand gaps between user skills and job requirements. Built ATS compatibility scoring system with detailed recommendations for improvement. Developed automated cover letter generation based on resume and job description analysis. Implemented secure user authentication using Firebase with user-specific resume storage. Built resume management system allowing users to save and manage multiple resumes. Created PDF processing capabilities using PDFjs and pdf-to-img for resume analysis. Integrated Google Gemini 2,5 Flash AI for intelligent resume analysis and feedback generation. Built responsive Next.js 15 frontend with TypeScript and Tailwind CSS for optimal user experience.',
+    image: 'https://placehold.co/600x400/9b59b6/FFFFFF.png?text=ATS+Resume+Checker',
+    video: 'https://www.youtube.com/embed/YIc4d_J148Y',
+    tags: ['Next.js 15', 'React 19', 'TypeScript', 'Google Gemini AI', 'Firebase', 'Tailwind CSS', 'PDF Processing', 'AI Integration'],
+    category: 'AI',
     link: '#'
   },
   {
@@ -178,6 +178,16 @@ const projects = [
   },
   {
     id: 10,
+    title: 'Modern Portfolio Website',
+    description: 'Developed a sophisticated personal portfolio website with advanced interaction and multimedia capabilities. Built with Vue.js and Tailwind CSS for a fast, responsive, and modern user experience. Implemented a flexible project showcase with interactive modals and media display. Created custom video integration supporting both direct video files and YouTube embeds with player controls. Integrated 3D.js for interactive visual elements and dynamic content presentation. Designed an intelligent content display system that adapts to different media types (videos, images). Incorporated a two-column feature list layout for improved readability of project details. Built responsive design ensuring optimal experience across all devices from mobile to desktop. Added category filtering for easy navigation through different project types. Implemented smooth animations and transitions for enhanced user experience. Used modern JavaScript features and Vue.js composition API for maintainable and scalable code architecture.',
+    image: 'https://placehold.co/600x400/e74c3c/FFFFFF.png?text=Vue.js+Tailwind.css+Portfolio',
+    noMedia: true,
+    tags: ['Vue.js', 'Tailwind CSS', 'JavaScript', '3D.js', 'Responsive Design', 'Interactive UI'],
+    category: 'Web Development',
+    link: '#'
+  },
+  {
+    id: 11,
     title: 'EU HORIZON 2020 HADRIAN Project - HMI Development',
     description: 'Collaborated with the University of Surrey on the prestigious EU HORIZON 2020 HADRIAN project to develop next-generation Human-Machine Interfaces for automated vehicles. Implemented an agile HMI development methodology based on extensive research, psychological studies, A/B testing frameworks, and simulation evaluations. Designed and executed comprehensive in-vehicle studies to validate interface effectiveness and user experience in real-world scenarios. Developed a robust communication architecture utilizing UDP protocols to integrate vehicle data streams with HADRIAN innovations. Created adaptive interfaces that respond to driver state and vehicle environment for improved safety and user experience. Implemented real-time data visualization components to provide drivers with intuitive feedback about automation status and vehicle intentions. Conducted extensive usability testing with diverse user groups to ensure inclusive design principles were followed. Collaborated with international research teams to integrate findings from multiple disciplines including cognitive psychology, human factors, and computer science. Contributed to publications and deliverables documenting methodologies and results for the broader scientific community.',
     image: 'https://hadrianproject.eu/wp-content/uploads/2019/09/HADRIAN.svg',
@@ -189,7 +199,7 @@ const projects = [
     link: 'https://hadrianproject.eu'
   },
   {
-    id: 11,
+    id: 12,
     title: 'EU HORIZON 2020 HADRIAN Project - Driver Monitoring System',
     description: 'Developed a sophisticated Driver Monitoring System (DMS) for the EU HORIZON 2020 HADRIAN project, designed to enhance road safety in automated vehicles through advanced driver state detection. Created predictive models capable of multi-class classification of driver states including attentiveness, distraction, fatigue, and readiness to take control of automated vehicles. Implemented TensorFlow-based deep learning architectures optimized for real-time processing of multidimensional driver data. Designed and executed comprehensive data collection protocols, gathering high-quality behavioral data across diverse driving scenarios and conditions. Developed robust data cleaning and preprocessing pipelines to ensure model training integrity and performance reliability. Enhanced classification accuracy through the integration of emotional state recognition, creating more nuanced driver state profiles that account for stress, cognitive load, and situational awareness. Collaborated with interdisciplinary teams to validate system performance against human factors research benchmarks. Contributed to technical deliverables and publications documenting methodologies, algorithm design, and performance metrics. Developed system integration protocols allowing the DMS to communicate seamlessly with other vehicle subsystems including HMI and automation controllers.',
     image: 'https://hadrianproject.eu/wp-content/uploads/2019/09/HADRIAN.svg',
@@ -201,7 +211,7 @@ const projects = [
     link: 'https://hadrianproject.eu'
   },
   {
-    id: 12,
+    id: 13,
     title: 'Shopify-Grist Integration System',
     description: 'Developed a comprehensive system to synchronize product, inventory, customer, and order data between Shopify and Grist databases. Created bidirectional data flow ensuring real-time inventory accuracy across platforms. Implemented customer data validation with phone number verification. Built GUI dashboard for simplified order management and processing. Designed automated payment verification and refund/return handling. Established reliable secure connection between platforms with proper authentication. Created an audit trail for all data modifications ensuring transparency and traceability. Implemented error recovery processes to handle network or API failures gracefully.',
     image: 'https://placehold.co/600x400/27ae60/FFFFFF.png?text=Shopify-Grist+Integration',
@@ -211,7 +221,7 @@ const projects = [
     link: 'https://github.com/Camci/Portfolio_Automations/tree/master/ecommerce_integration/shopify_grist'
   },
   {
-    id: 13,
+    id: 14,
     title: 'Jewelry Product Weight Management Suite',
     description: 'Engineered specialized tools for jewelry product weight calculations and automated updates across product variants. Developed algorithms to convert weights between different gold karats (10K, 14K). Created automated weight update pipelines for thousands of products. Implemented validation to ensure data accuracy and consistency. Reduced manual data entry by 90% through automation. Built a product database with comprehensive metal type and weight specifications. Created specialized formulas that account for stone settings and other non-gold components. Enabled bulk processing capabilities to handle large product catalogs efficiently.',
     image: 'https://placehold.co/600x400/f1c40f/FFFFFF.png?text=Jewelry+Weight+Management',
@@ -221,7 +231,7 @@ const projects = [
     link: 'https://github.com/Camci/Portfolio_Automations/tree/master/ecommerce_integration/jewelry_weight_management'
   },
   {
-    id: 14,
+    id: 15,
     title: 'Dynamic Pricing System',
     description: 'Built a system that automatically adjusts product pricing based on real-time gold market rates. Integrated with Kitco API for reliable gold price data. Implemented daily update cycles with error handling. Created flexible pricing rules based on product categories and metal types. Maintained profit margins despite market fluctuations. Developed customizable markup rules for different product categories and types. Created a dashboard for monitoring price changes and market trends. Implemented notification system for significant market movements. Established historical pricing database for trend analysis and forecasting.',
     image: 'https://placehold.co/600x400/16a085/FFFFFF.png?text=Dynamic+Pricing+System',
@@ -231,7 +241,7 @@ const projects = [
     link: 'https://github.com/Camci/Portfolio_Automations/tree/master/ecommerce_integration/pricing_system'
   },
   {
-    id: 15,
+    id: 16,
     title: 'Product Image Management System',
     description: 'Developed image processing tools to handle product variations and maintain visual consistency. Batch processing for resizing and optimizing product images. Automated image adjustments for different metal types (White Gold, Rose Gold). Quality verification and metadata management. Cross-platform image synchronization. Implemented intelligent image naming and organization system. Created bulk upload utilities with progress tracking and error recovery. Built automated watermarking with customizable positioning and opacity. Developed an image transformation pipeline for consistent styling across thousands of products.',
     image: 'https://placehold.co/600x400/7f8c8d/FFFFFF.png?text=Image+Processing+Tools',
@@ -241,7 +251,7 @@ const projects = [
     link: 'https://github.com/Camci/Portfolio_Automations/tree/master/ecommerce_integration/product_image_management'
   },
   {
-    id: 16,
+    id: 17,
     title: 'Google Ads Performance Analytics',
     description: 'Built custom reporting tools to track and analyze Google Ads campaign performance. Comprehensive historical data analysis with data visualization and trend identification. API integration with secure authentication and rate limit handling. Custom metrics calculation and visualization for ROAS, conversion rates, and engagement. Automated reporting and insights generation with scheduled distribution. Implemented cross-campaign comparison and optimization suggestions. Created customizable dashboards for different stakeholder needs. Developed predictive modeling for campaign performance forecasting.',
     image: 'https://placehold.co/600x400/3498db/FFFFFF.png?text=Google+Ads+Analytics',
@@ -251,7 +261,7 @@ const projects = [
     link: 'https://github.com/Camci/Portfolio_Automations/tree/master/marketing_analytics/google_ads_analytics'
   },
   {
-    id: 17,
+    id: 18,
     title: 'Product Data Management System',
     description: 'Built tools to manage complex product variants and metadata across multiple e-commerce platforms. Bulk title and description updates with pattern matching and replacement. Variant structure management and optimization for complex product configurations. Product option configuration and relationship mapping. Data consistency validation across platforms and channels. Implemented product taxonomy and hierarchical categorization. Created advanced search and filtering tools for quick product location. Developed version control for product data changes with rollback capability. Built import/export utilities for cross-platform product management.',
     image: 'https://placehold.co/600x400/8e44ad/FFFFFF.png?text=Product+Data+Management',
@@ -261,7 +271,7 @@ const projects = [
     link: 'https://github.com/Camci/Portfolio_Automations/tree/master/automation_tools/product_management'
   },
   {
-    id: 18,
+    id: 19,
     title: 'CSV Data Processing Pipeline',
     description: 'Created efficient data processing workflows for large CSV datasets to handle complex data operations. Designed high-performance data transformation algorithms with minimal memory footprint. Implemented error handling and data validation with comprehensive error reporting. Created logging and monitoring systems for process transparency. Built visualization tools for data exploration and pattern recognition. Developed streaming processors for handling files larger than available memory. Created automated data cleansing and normalization routines. Implemented configurable data mapping between different schemas and formats. Built parallel processing capabilities for multi-core utilization.',
     image: 'https://placehold.co/600x400/c0392b/FFFFFF.png?text=CSV+Processing+Pipeline',
