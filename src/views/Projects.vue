@@ -150,7 +150,7 @@ const projects = [
     title: 'ATS Resume Checker',
     description: 'Developed a powerful web application that helps job seekers optimize their resumes for Applicant Tracking Systems (ATS) using Google Gemini AI. Built comprehensive resume analysis system that analyzes resumes against job descriptions providing detailed feedback, compatibility scores, and actionable suggestions. Implemented advanced keyword analysis to identify matched and missing keywords from job requirements. Created skill gap analysis to understand gaps between user skills and job requirements. Built ATS compatibility scoring system with detailed recommendations for improvement. Developed automated cover letter generation based on resume and job description analysis. Implemented secure user authentication using Firebase with user-specific resume storage. Built resume management system allowing users to save and manage multiple resumes. Created PDF processing capabilities using PDFjs and pdf-to-img for resume analysis. Integrated Google Gemini 2,5 Flash AI for intelligent resume analysis and feedback generation. Built responsive Next.js 15 frontend with TypeScript and Tailwind CSS for optimal user experience.',
     image: 'https://placehold.co/600x400/9b59b6/FFFFFF.png?text=ATS+Resume+Checker',
-    video: 'https://www.youtube.com/embed/oyymKJUVy',
+    video: 'https://www.youtube.com/embed/oyymKJUVy-M',
     tags: ['Next.js 15', 'React 19', 'TypeScript', 'Google Gemini AI', 'Firebase', 'Tailwind CSS', 'PDF Processing', 'AI Integration'],
     category: 'AI',
     link: '#'
