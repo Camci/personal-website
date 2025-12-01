@@ -154,26 +154,36 @@ const skillCategories = {
   'Programming Languages': [
     { name: 'JavaScript', level: 90 },
     { name: 'TypeScript', level: 85 },
-    { name: 'Python', level: 90 },
+    { name: 'Python', level: 95 },
+    { name: 'PHP', level: 50 },
     { name: 'C++', level: 70 }
   ],
   'Frontend Development': [
-    { name: 'Vue.js', level: 95 },
-    { name: 'React', level: 85 },
-    { name: 'HTML/CSS', level: 95 },
-    { name: 'Shopify Liquid', level: 90 }
+    { name: 'Vue.js', level: 90 },
+    { name: 'React', level: 95 },
+    { name: 'Next.js', level: 95 },
+    { name: 'HTML5', level: 95 },
+    { name: 'CSS3', level: 95 },
+    { name: 'Shopify Liquid', level: 95 }
   ],
   'Backend & Cloud': [
     { name: 'Node.js', level: 85 },
-    { name: 'AWS Services', level: 90 },
+    { name: 'Express.js', level: 90 },
+    { name: 'AWS', level: 85 },
     { name: 'Serverless', level: 85 },
-    { name: 'GraphQL/REST', level: 90 }
+    { name: 'GraphQL/REST', level: 90 },
+    { name: 'MySQL', level: 80 },
+    { name: 'NoSQL', level: 90 },
+    { name: 'Docker', level: 80 }
   ],
   'ML & Data Science': [
     { name: 'Machine Learning', level: 80 },
     { name: 'Computer Vision', level: 85 },
     { name: 'Data Analytics', level: 80 },
     { name: 'AI Integration', level: 75 }
+  ],
+  'Tools & Version Control': [
+    { name: 'Git', level: 95 }
   ]
 };
 
@@ -199,12 +209,16 @@ const workExperience = [
       'Shopify app development, delivering custom solutions to enhance functionality and user experience',
       'Developing custom online stores with reusable components for managing bulk orders for wholesale',
       'Proficient in Storefront, Admin AJAX, GraphQL, and REST APIs for efficient data analysis',
-      'Built Python-based data distribution models, enhancing analytics with Google Ads and Meta APIs'
+      'Built Python-based data distribution models, enhancing analytics with Google Ads and Meta APIs',
+      'Creating headless Shopify stores using Next.js and Shopify Storefront API',
+      'Creating Internal Data management tools with Next.js and AWS deployment solutions (Dockerized)',
+      "Creationg Invoicing and reporting tools with Next.js and AWS deployment solutions (Dockerized)"
+
     ],
     technologies: ['Shopify', 'Liquid', 'JavaScript', 'Python', 'GraphQL', 'REST API', 'HTML/CSS', 'AJAX']
   },
   {
-    title: 'Full Stack Developer',
+    title: 'Tech Lead/Full Stack Developer',
     company: 'Mosaique',
     period: 'Sep 2023 - Present',
     description: 'Tech lead and co-founder of an AWS-based AI Marketing tool.',

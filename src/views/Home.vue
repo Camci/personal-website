@@ -139,39 +139,78 @@ const skills = [
   { name: 'JavaScript', icon: 'fab fa-js', level: 90 },
   { name: 'Liquid', icon: 'fab fa-shopify', level: 95 },
   { name: 'Vue.js', icon: 'fab fa-vuejs', level: 90 },
-  { name: 'React', icon: 'fab fa-react', level: 70 },
-  { name: 'Node.js', icon: 'fab fa-node-js', level: 80 },
+  { name: 'React', icon: 'fab fa-react', level: 95 },
+  { name: 'Next.js', icon: 'simple-icons:nextdotjs', level: 95 },
+  { name: 'Node.js', icon: 'fab fa-node-js', level: 85 },
+  { name: 'Express.js', icon: 'simple-icons:express', level: 90 },
   { name: 'HTML5', icon: 'fab fa-html5', level: 95 },
   { name: 'CSS3', icon: 'fab fa-css3-alt', level: 95 },
   { name: 'Git', icon: 'fab fa-git-alt', level: 95 },
-  { name: 'AWS', icon: 'fab fa-aws', level: 75 },
+  { name: 'AWS', icon: 'fab fa-aws', level: 85 },
   { name: 'Python', icon: 'fab fa-python', level: 95 },
   { name: 'MySQL', icon: 'fas fa-database', level: 80 },
   { name: 'NoSQL', icon: 'fas fa-database', level: 90 },
-  { name: 'Docker', icon: 'fab fa-docker', level: 60 },
+  { name: 'Docker', icon: 'fab fa-docker', level: 80 },
   { name: 'PHP', icon: 'fab fa-php', level: 50 }
 ];
 
 // Projects data
 const featuredProjects = [
-  {
+{
     id: 1,
     title: 'B2B Fully Customized Shopify Website',
-    description: 'Developed a comprehensive B2B Shopify solution with enterprise-level functionality without relying on paid apps or themes. B2B completely free platform without paid apps or themes. Only accepted users can access the platform through a custom tag mechanism.',
+    description: 'Developed a comprehensive B2B Shopify solution with enterprise-level functionality without relying on paid apps or themes. B2B completely free platform without paid apps or themes. Only accepted users can access the platform through a custom tag mechanism. Engineered custom page and collection mechanisms for optimized browsing. Designed collection pages to display 33 products per page for optimal user experience. Built product pages supporting up to 5,000 variants while maintaining performance. Implemented AJAX-powered variant selection for seamless cart interactions. Created a system to pass custom metafield values to cart line items as properties. Fully responsive and mobile-friendly design for seamless experience across all devices.',
     image: 'https://placehold.co/600x400/3498db/FFFFFF.png?text=B2B+Shopify+Website',
+    video: 'https://www.youtube.com/embed/4DJhnep2IcM',
+    mobileVideo: 'https://www.youtube.com/embed/led-Z57MLDU',
     tags: ['Shopify', 'B2B', 'Custom Development', 'Liquid', 'JavaScript'],
+    category: 'Web Development',
     link: '#'
   },
   {
     id: 2,
     title: 'B2C Shopify Website',
-    description: 'Developed a custom B2C e-commerce solution on Shopify with premium user experience and advanced functionality. Customized Product page with enhanced display options and user interactions.',
+    description: 'Developed a custom B2C e-commerce solution on Shopify with premium user experience and advanced functionality. Customized Product page with enhanced display options and user interactions. Customized Home Page with engaging layout and brand-focused sections. Customized Pages including comprehensive footer design. Custom Announcement Bar with theme adaptability allowing client control via the online editor. Custom Gold API integration for real-time precious metal pricing. Custom buttons for seamless external app integration. Custom Metafield connections for external apps enhancing product information. Custom collection slider on the home page for featured product showcasing. Custom Drawer menu optimized for mobile users. Marketing tools integration including Meta suite, Klaviyo and more for comprehensive marketing capabilities. Maintaining theme integrity when updates are released for seamless platform evolution.',
     image: 'https://placehold.co/600x400/2c3e50/FFFFFF.png?text=B2C+Shopify+Website',
+    video: 'https://www.youtube.com/embed/mbG1s6tzAGo',
+    mobileVideo: 'https://www.youtube.com/embed/Rl--ypITGfY',
     tags: ['Shopify', 'B2C', 'Custom Development', 'Liquid', 'JavaScript', 'API Integration'],
+    category: 'Web Development',
+    link: '#'
+  },
+
+  {
+    id: 6,
+    title: 'Shopify Headless E-commerce Store',
+    description: 'Built a modern, full-featured headless e-commerce store using NextJs 15, TypeScript, and Shopify Storefront API. NextJs 15, TypeScript, and Shopify Storefront API. Developed a performant, scalable e-commerce solution with advanced features including real-time filtering, search, and cart management. Implemented comprehensive product catalog with pagination and detailed product pages featuring image galleries with hover zoom effects. Created advanced search functionality with real-time results, debouncing, and search dropdown with product previews. Built sophisticated filtering system supporting price ranges, availability, categories, and multiple sorting options. Developed responsive cart management system with add, remove, and update functionality using React Context API. Implemented server-side rendering for SEO optimization and secure API routes for server-side operations. Created loading states with skeleton animations and comprehensive error handling with graceful recovery. Built accessible design following WCAG guidelines with optimized images and lazy loading for performance. Integrated GraphQL with Shopify Storefront API for efficient data fetching and real-time updates.',
+    image: 'https://placehold.co/600x400/3498db/FFFFFF.png?text=Shopify+Headless+Store',
+    video: 'https://www.youtube.com/embed/VkZQm764nlw',
+    tags: ['Next.js 15', 'TypeScript', 'Shopify Storefront API', 'GraphQL', 'Tailwind CSS', 'Headless E-commerce', 'React Context', 'Server-Side Rendering'],
+    category: 'Web Development',
+    link: 'https://github.com/Camci/shopify-headless-example'
+  },
+    {
+    id: 5,
+    title: 'Crypto Management Platform',
+    description: 'Built a modern, full-featured cryptocurrency trading and portfolio management platform using NextJS 15 and TypeScript. Developed a professional-grade crypto trading platform with real-time data, advanced charting, and intelligent portfolio insights. Implemented comprehensive portfolio tracking with performance analytics, asset allocation visualization, and historical performance charts. Created advanced trading interface with real-time candlestick charts, order books, and professional trading tools. Built market analysis dashboard with trending coins, top gainers/losers, and comprehensive market statistics. Developed staking platform with multiple pools, flexible terms, and reward tracking. Implemented secure wallet management with multi-asset support, transaction history, and QR code generation. Created crypto debit card system with spending analytics and cashback rewards. Built global search functionality with real-time suggestions and smart filtering. Implemented dark/light theme toggle with seamless switching and persistent settings. Integrated CoinPaprika API for real-time cryptocurrency data with rate limiting and error handling. Built responsive design optimized for desktop, tablet, and mobile devices with smooth animations.',
+    image: 'https://placehold.co/600x400/8e44ad/FFFFFF.png?text=Crypto+Management+Platform',
+    video: 'https://www.youtube.com/embed/LAs-sXhJb7A',
+    tags: ['Next.js 15', 'TypeScript', 'React', 'Tailwind CSS', 'Recharts', 'CoinPaprika API', 'Cryptocurrency', 'Trading Platform', 'Portfolio Management', 'Staking'],
+    category: 'Web Development',
+    link: 'https://github.com/Camci/crypto-management'
+  },
+  {
+    id: 3,
+    title: 'BulkBridge - Shopify Data Management App',
+    description: 'Developed a comprehensive Shopify embedded application for bulk data import/export operations using CSV format. Built with AWS Serverless architecture for high scalability and cost efficiency. Implemented secure authentication using Shopify session tokens and JWT. Created a React-based frontend with Shopify Polaris UI components and App Bridge for seamless integration. Built serverless backend using AWS Lambda, API Gateway, DynamoDB, and S3 for optimal performance. Implemented comprehensive job tracking system with detailed status updates and error handling. Developed bulk operations for products, customers, orders, discounts, and metafields management. Created automated CSV processing with validation and error reporting. Built scalable architecture supporting stores with thousands of products. Implemented secure file handling with S3 integration for temporary storage. Created detailed logging system for audit trails and debugging. Built responsive admin interface with real-time progress tracking. Implemented batch processing capabilities for large datasets. Created automated cleanup processes for temporary files and expired sessions. 10K variants imported in 3 minutes.',
+    image: 'https://placehold.co/600x400/1abc9c/FFFFFF.png?text=BulkBridge+App',
+    video: 'https://www.youtube.com/embed/McGy23z7rI8',
+    tags: ['Shopify', 'AWS', 'React', 'Serverless', 'CSV Processing', 'Bulk Operations', 'API Integration', 'DynamoDB', 'Lambda'],
+    category: 'Web Development',
     link: '#'
   },
   {
-    id: 4,
+    id: 7,
     title: 'Mosaique AI Marketing Tracker',
     description: 'Built a sophisticated AI-powered marketing analytics platform from the ground up. AWS based ecosystem leveraging cloud-native architecture. Custom Lambda functions for serverless processing of marketing data.',
     image: 'https://mosaique.us/img/logo_black.c5aa620b.png',
@@ -179,7 +218,8 @@ const featuredProjects = [
     imageStyle: 'object-contain max-w-[50%] max-h-[50%]',
     tags: ['AWS', 'Vue.js', 'Lambda', 'API Gateway', 'AI', 'Analytics', 'Serverless'],
     link: '#'
-  }
+  },
+  
 ];
 </script>
 

@@ -96,7 +96,7 @@
               </div>
               <div>
                 <h3 class="text-lg font-semibold text-secondary mb-1">Location</h3>
-                <p class="text-gray-600">Philadelphia, US</p>
+                <p class="text-gray-600">Utrecht, NL</p>
                 <p class="text-gray-600">Available for remote work, hybrid work, and travel worldwide</p>
               </div>
             </div>

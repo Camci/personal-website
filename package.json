@@ -18,6 +18,7 @@
   "author": "Mustafa Camci",
   "license": "MIT",
   "dependencies": {
+    "@iconify/vue": "^5.0.0",
     "@vueuse/core": "^10.9.0",
     "gsap": "^3.12.5",
     "three": "^0.162.0",

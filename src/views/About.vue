@@ -35,7 +35,7 @@
                   <div class="w-8 h-8 bg-primary/10 text-primary rounded-full flex items-center justify-center mr-3">
                     <i class="fas fa-map-marker-alt"></i>
                   </div>
-                  <span>Based in USA</span>
+                  <span>Based in NL</span>
                 </li>
                 <li class="flex items-center">
                   <div class="w-8 h-8 bg-primary/10 text-primary rounded-full flex items-center justify-center mr-3">
