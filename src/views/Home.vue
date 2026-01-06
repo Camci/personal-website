@@ -213,10 +213,10 @@ const featuredProjects = [
     id: 7,
     title: 'Mosaique AI Marketing Tracker',
     description: 'Built a sophisticated AI-powered marketing analytics platform from the ground up. AWS based ecosystem leveraging cloud-native architecture. Custom Lambda functions for serverless processing of marketing data.',
-    image: 'https://mosaique.us/img/logo_black.c5aa620b.png',
-    imageBg: 'bg-white',
-    imageStyle: 'object-contain max-w-[50%] max-h-[50%]',
+    image: 'https://placehold.co/600x400/111827/FFFFFF.png?text=Mosaique+AI+Marketing+Tracker',
+    video: 'https://www.youtube.com/embed/3sE3MqKYZgE',
     tags: ['AWS', 'Vue.js', 'Lambda', 'API Gateway', 'AI', 'Analytics', 'Serverless'],
+    category: 'AI',
     link: '#'
   },
   

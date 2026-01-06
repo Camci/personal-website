@@ -148,9 +148,8 @@ const projects = [
     id: 7,
     title: 'Mosaique AI Marketing Tracker',
     description: 'Built a sophisticated AI-powered marketing analytics platform from the ground up. AWS based ecosystem leveraging cloud-native architecture. Custom Lambda functions for serverless processing of marketing data. Custom API Gateways established for secure data flow and third-party integrations. Vue.js front-end with custom CSS styling delivering an intuitive user experience. Modern and fresh interface designed for clarity and ease of use. Detailed metric demonstration through interactive graphs, charts and comprehensive summaries. External application connections integrated seamlessly with Meta Suite, Shopify and Google Analytics. Full private integrated AI solution for predictive analytics and marketing insights. Custom development environment with enhanced authentication steps based on AWS security best practices.',
-    image: 'https://mosaique.us/img/logo_black.c5aa620b.png',
-    imageBg: 'bg-white',
-    imageStyle: 'object-contain max-w-[50%] max-h-[50%]',
+    image: 'https://placehold.co/600x400/111827/FFFFFF.png?text=Mosaique+AI+Marketing+Tracker',
+    video: 'https://www.youtube.com/embed/3sE3MqKYZgE',
     tags: ['AWS', 'Vue.js', 'Lambda', 'API Gateway', 'AI', 'Analytics', 'Serverless'],
     category: 'AI',
     link: '#'
